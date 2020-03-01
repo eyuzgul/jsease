@@ -1,0 +1,26 @@
+{
+  "name": "jsease",
+  "version": "0.3.0",
+  "description": "Easy to use JavaScript functions",
+  "main": "jsease.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eyuzgul/jsease.git"
+  },
+  "keywords": [
+    "jsease",
+    "JavaScript",
+    "Function",
+    "Easy"
+  ],
+  "author": "eyuzgul <eyuzgul@gmail.com> (https://github.com/eyuzgul/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eyuzgul/jsease/issues"
+  },
+  "homepage": "https://github.com/eyuzgul/jsease#readme"
+}
