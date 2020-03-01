@@ -30,6 +30,7 @@ module.exports = {
         return txt;
     },
     elit    : function(txt) {
+        // array is sample... you can add/change/remove item(s)
         let arr = {
             "a":"α",
             "A":"Δ",
