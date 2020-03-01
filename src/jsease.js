@@ -2,13 +2,13 @@
 module.exports = {
     upper     : txt => txt.toUpperCase(),
     lower     : txt => txt.toLowerCase(),
-    capital   : txt => txt.charAt(0).toUpperCase() + txt.slice(1).toLowerCase(),
     camel     : txt => txt.replace(/\W+(.)/g, (match, chr) => chr.toUpperCase()),
-    title     : txt => txt.toLowerCase().split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' '),
+    capital   : (txt, noPreservedCase) => (noPreservedCase === true ? txt : txt.toLowerCase() ).replace(/([\.\?!]+)(\s*)/g, r => r[0] ).split(/([\.\?!]+)/g).map(x=>x.length > 1 ? x[0].toUpperCase() + x.slice(1) : x + " ").join("").trim(),
+    title     : (txt, noPreservedCase) => (noPreservedCase === true ? txt : txt.toLowerCase() ).replace(/(?:^|\s)\S/g, x => x.toUpperCase()),
     isUpper   : txt => txt === txt.toUpperCase(),
     isLower   : txt => txt === txt.toLowerCase(),
-    isCapital : function(txt) {return txt === this.capital(txt)},
     isCamel   : function(txt) {return txt === this.camel(txt)},
+    isCapital : function(txt) {return txt === this.capital(txt)},
     isTitle   : function(txt) {return txt === this.title(txt)},
     reverse   : txt => txt.split('').reverse().join(''),
     random    : txt => txt.split('').map(letter => parseInt(Math.random()*100)%2 === 0 ? letter.toUpperCase() : letter.toLowerCase()).join(''),
@@ -30,7 +30,7 @@ module.exports = {
         return txt;
     },
     elit    : function(txt) {
-        // array is sample... you can add/change/remove item(s)
+        // you can add/change/remove item(s)
         let arr = {
             "a":"α",
             "A":"Δ",
