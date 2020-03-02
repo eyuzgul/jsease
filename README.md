@@ -26,12 +26,6 @@ const fn = require("jsease");
 
 Currently available functions listed below
 
-```js
-// define some variables
-const txt = 'Lorem ipsum dolor!';
-const long = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis! nulla quisquam? at!!!';
-```
-
 ### upper(txt)
 ```js
 // define some variables
