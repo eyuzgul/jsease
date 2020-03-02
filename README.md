@@ -34,6 +34,10 @@ const long = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis!
 
 ### upper(txt)
 ```js
+// define some variables
+const txt = 'Lorem ipsum dolor!';
+const long = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis! nulla quisquam? at!!!';
+
 console.log(fn.upper(txt)); 
 // LOREM IPSUM. DOLOR!
 console.log(fn.upper(long)); 
@@ -42,6 +46,10 @@ console.log(fn.upper(long));
 ```
 ### lower(txt)
 ```js
+// define some variables
+const txt = 'Lorem ipsum dolor!';
+const long = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis! nulla quisquam? at!!!';
+
 console.log(fn.lower(txt)); 
 // lorem ipsum. dolor!
 console.log(fn.lower(long)); 
@@ -50,6 +58,10 @@ console.log(fn.lower(long));
 ```
 ### camel(txt)
 ```js
+// define some variables
+const txt = 'Lorem ipsum dolor!';
+const long = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis! nulla quisquam? at!!!';
+
 console.log(fn.camel(txt)); 
 // LoremIpSUmDolor!
 console.log(fn.camel(long)); 
@@ -58,6 +70,10 @@ console.log(fn.camel(long));
 ```
 ### capital(txt [,noPreservedCase])
 ```js
+// define some variables
+const txt = 'Lorem ipsum dolor!';
+const long = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis! nulla quisquam? at!!!';
+
 console.log(fn.capital(txt)); 
 // Lorem ipsum. Dolor!
 console.log(fn.capital(txt, true)); 
@@ -69,6 +85,10 @@ console.log(fn.capital(long, true));
 ```
 ### title(txt [,noPreservedCase])
 ```js
+// define some variables
+const txt = 'Lorem ipsum dolor!';
+const long = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis! nulla quisquam? at!!!';
+
 console.log(fn.title(txt)); 
 // Lorem Ipsum. Dolor!
 console.log(fn.title(txt, true)); 
@@ -80,36 +100,55 @@ console.log(fn.title(long, true));
 ```
 ### isUpper(txt)
 ```js
+// define some variables
+const txt = 'Lorem ipsum dolor!';
+
 console.log(fn.isUpper(txt)); 
 // false
 ```
 
 ### isLower(txt)
 ```js
+// define some variables
+const txt = 'Lorem ipsum dolor!';
+
 console.log(fn.isLower(txt)); 
 // false
 ```
 
 ### isCamel(txt)
 ```js
+// define some variables
+const txt = 'Lorem ipsum dolor!';
+
 console.log(fn.isCamel(txt)); 
 // false
 ```
 
 ### isCapital(txt)
 ```js
+// define some variables
+const txt = 'Lorem ipsum dolor!';
+
 console.log(fn.isCapital(txt)); 
 // false
 ```
 
 ### isTitle(txt)
 ```js
+// define some variables
+const txt = 'Lorem ipsum dolor!';
+
 console.log(fn.isTitle(txt)); 
 // false
 ```
 
 ### reverse(txt)
 ```js
+// define some variables
+const txt = 'Lorem ipsum dolor!';
+const long = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis! nulla quisquam? at!!!';
+
 console.log(fn.reverse(txt)); 
 // !rolod .mUSpi meroL
 console.log(fn.reverse(long)); 
@@ -119,6 +158,10 @@ console.log(fn.reverse(long));
 
 ### switch(txt)
 ```js
+// define some variables
+const txt = 'Lorem ipsum dolor!';
+const long = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis! nulla quisquam? at!!!';
+
 console.log(fn.switch(txt)); 
 // lOREM IPsuM. DOLOR!
 console.log(fn.switch(long)); 
@@ -127,6 +170,10 @@ console.log(fn.switch(long));
 
 ### random(txt)
 ```js
+// define some variables
+const txt = 'Lorem ipsum dolor!';
+const long = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis! nulla quisquam? at!!!';
+
 /** 
  * Generating random UPPER or lower letters when it run
  * */
@@ -138,6 +185,10 @@ console.log(fn.random(long));
 
 ### wordCount(txt)
 ```js
+// define some variables
+const txt = 'Lorem ipsum dolor!';
+const long = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis! nulla quisquam? at!!!';
+
 console.log(fn.wordCount(txt)); 
 // 3
 console.log(fn.wordCount(long)); 
@@ -146,6 +197,10 @@ console.log(fn.wordCount(long));
 
 ### start(txt,str)
 ```js
+// define some variables
+const txt = 'Lorem ipsum dolor!';
+const long = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis! nulla quisquam? at!!!';
+
 console.log(fn.start(txt,"Lorem")); 
 // true
 console.log(fn.start(long,"ipsum")); 
@@ -154,6 +209,10 @@ console.log(fn.start(long,"ipsum"));
 
 ### end(txt,str)
 ```js
+// define some variables
+const txt = 'Lorem ipsum dolor!';
+const long = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis! nulla quisquam? at!!!';
+
 console.log(fn.end(txt,"dolor!")); 
 // true
 console.log(fn.end(long,"amet")); 
@@ -162,6 +221,10 @@ console.log(fn.end(long,"amet"));
 
 ### slug(txt)
 ```js
+// define some variables
+const txt = 'Lorem ipsum dolor!';
+const long = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis! nulla quisquam? at!!!';
+
 console.log(fn.slug(txt)); 
 // lorem-ipsum-dolor
 console.log(fn.slug(long)); 
@@ -170,6 +233,10 @@ console.log(fn.slug(long));
 
 ### elit(txt)
 ```js
+// define some variables
+const txt = 'Lorem ipsum dolor!';
+const long = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis! nulla quisquam? at!!!';
+
 console.log(fn.elit(txt)); 
 // lфгέm-ipsum.-dфlфг!
 console.log(fn.elit(long)); 
@@ -178,6 +245,10 @@ console.log(fn.elit(long));
 
 ### readingTime(txt[, format='{time}'][, wpm=180])
 ```js
+// define some variables
+const txt = 'Lorem ipsum dolor!';
+const long = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis! nulla quisquam? at!!!';
+
 console.log(fn.readingtime(txt)); 
 // about a minute
 console.log(fn.readingtime(long, '', 5)); 
@@ -186,6 +257,10 @@ console.log(fn.readingtime(long, '', 5));
 
 ### focus(txt, str [, chars=20])
 ```js
+// define some variables
+const txt = 'Lorem ipsum dolor!';
+const long = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis! nulla quisquam? at!!!';
+
 console.log(fn.focus(txt,"dolor",5)); 
 // ...SUm. dolor!
 console.log(fn.focus(long,"amet",10)); 
@@ -194,6 +269,10 @@ console.log(fn.focus(long,"amet",10));
 
 ### truncate(txt, chars [, dots])
 ```js
+// define some variables
+const txt = 'Lorem ipsum dolor!';
+const long = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis! nulla quisquam? at!!!';
+
 console.log(fn.truncate(txt,10)); 
 // Lorem ipSU
 console.log(fn.truncate(long,20," >>")); 
@@ -202,6 +281,10 @@ console.log(fn.truncate(long,20," >>"));
 
 ### wordWrap(txt, length)
 ```js
+// define some variables
+const txt = 'Lorem ipsum dolor!';
+const long = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis! nulla quisquam? at!!!';
+
 console.log(fn.wordWrap(txt,5)); 
 // Lorem <br />ipSUm. <br />dolor! <br />
 console.log(fn.wordWrap(long,10)); 
@@ -210,6 +293,10 @@ console.log(fn.wordWrap(long,10));
 
 ### wrapper(txt, str [, tagName='span'][, className='mark'])
 ```js
+// define some variables
+const txt = 'Lorem ipsum dolor!';
+const long = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis! nulla quisquam? at!!!';
+
 console.log(fn.wrapper(txt,'dolor')); 
 // Lorem ipSUm. <span class='mark'>dolor</span>!
 console.log(fn.wrapper(long,'amet','span','highlight')); 
