@@ -16,17 +16,17 @@ module.exports = {
     wordCount : txt => txt.replace(/\s+/g, ' ').split(' ').length,
     start     : (txt,str) => txt.slice(0,str.length) === str,
     end       : (txt,str) => txt.substr(-str.length) === str,
-    trslug    : function(txt) {
-        let turkish = { 'ş': 's', 'Ş': 'S', 'ı': 'i', 'İ': 'I', 'ç': 'c', 'Ç': 'C', 'ü': 'u', 'Ü': 'U', 'ö': 'o', 'Ö': 'O', 'ğ': 'g', 'Ğ': 'G'};
+    slug    : function(txt) {
+        let arr = { 'ş': 's', 'Ş': 'S', 'ı': 'i', 'İ': 'I', 'ç': 'c', 'Ç': 'C', 'ü': 'u', 'Ü': 'U', 'ö': 'o', 'Ö': 'O', 'ğ': 'g', 'Ğ': 'G'};
         txt = txt.toLowerCase();        
-        for (var c in turkish) {
+        for (var c in arr) {
             var regex = new RegExp(c, "g");
-            txt = txt.replace(regex, turkish[c]);
+            txt = txt.replace(regex, arr[c]);
         }
-        txt = txt.replace(/[^-\w\s]/g, ''); // remove unneeded chars
-        txt = txt.replace(/^\s+|\s+$/g, ''); // trim leading/trailing spaces
-        txt = txt.replace(/[-\s]+/g, '-'); // convert spaces to hyphens
-        txt = txt.replace(/-+$/g, ''); // trim any trailing hyphens
+        txt = txt.replace(/[^-\w\s]/g, '');
+        txt = txt.replace(/^\s+|\s+$/g, '');
+        txt = txt.replace(/[-\s]+/g, '-');
+        txt = txt.replace(/-+$/g, '');
         return txt;
     },
     elit    : function(txt) {
