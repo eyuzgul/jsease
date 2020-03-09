@@ -1,13 +1,66 @@
 'use strict';
 module.exports = {
+  
+    isStr: function(x) {
+      return typeof x === "string";
+    },
+    isNum: function(x) {
+      return typeof x === "number" && x === x;
+    },
+    isBool: function(x) {
+      return !!x === x;
+    },
+    isNull: function(x) {
+      return x === null;
+    },
+    isUndef: function(x) {
+      return x === undefined;
+    },
+    isNund: function(x) {
+      return x === undefined || x === null;
+    },
+    isNan: function(x) {
+      return this.isNum(x) && x !== x;
+    },
+    isArr: function(x) {
+      if(x === undefined || x === null) {
+        return false;
+      }
+      return x.constructor.toString().split(' ')[1] || x;
+    },
+
+    pick: function(x) {
+      let arr = this.isStr(x) ? x.split(' ') : x ;
+      return arr;
+      return this[Math.floor(Math.random() * this.length)];
+    },
+
+
+
+
     upper     : txt => txt.toUpperCase(),
     lower     : txt => txt.toLowerCase(),
-    camel     : txt => txt.replace(/\W+(.)/g, (match, chr) => chr.toUpperCase()),
-    capital   : (txt, noPreservedCase) => (noPreservedCase === true ? txt : txt.toLowerCase() ).replace(/([\.\?!]+)(\s*)/g, r => r[0] ).split(/([\.\?!]+)/g).map(x=>x.length > 1 ? x[0].toUpperCase() + x.slice(1) : x + " ").join("").trim(),
+    // todo: kontrol
+    camel     : function(txt) { return this.isStr(txt) ? txt.replace(/\W+(.)/g, (match, chr) => chr.toUpperCase()) : txt },
+    isCamel   : function(txt) { return typeof txt === "string" && txt === this.camel(txt)},
+    
+    capital   : function(txt, noPreservedCase) {
+      if(typeof txt !== "string") {
+        return txt; 
+      } else {
+        if(noPreservedCase !== true) {
+          txt = txt.toLowerCase();
+        }
+        return txt.replace(/([\.\?!]+)(\s*)/g, r => r[0] )
+        .split(/([\.\?!]+)/g)
+        .map(x=>x.length > 1 ? x[0].toUpperCase() + x.slice(1) : x + " ")
+        .join("").trim();
+      }
+    },
+    // capital   : (txt, noPreservedCase) => (noPreservedCase === true ? txt : txt.toLowerCase() ).replace(/([\.\?!]+)(\s*)/g, r => r[0] ).split(/([\.\?!]+)/g).map(x=>x.length > 1 ? x[0].toUpperCase() + x.slice(1) : x + " ").join("").trim(),
     title     : (txt, noPreservedCase) => (noPreservedCase === true ? txt : txt.toLowerCase() ).replace(/(?:^|\s)\S/g, x => x.toUpperCase()),
     isUpper   : txt => txt === txt.toUpperCase(),
     isLower   : txt => txt === txt.toLowerCase(),
-    isCamel   : function(txt) {return txt === this.camel(txt)},
     isCapital : function(txt) {return txt === this.capital(txt)},
     isTitle   : function(txt) {return txt === this.title(txt)},
     reverse   : txt => txt.split('').reverse().join(''),
@@ -43,7 +96,7 @@ module.exports = {
             "y":"Ч",
             "Y":"Ч",
             "o":"ф",
-            "O":"Ф",
+            "O":"Ф"
         };
         txt = txt.toLowerCase();        
         for (var c in arr) {
@@ -167,6 +220,12 @@ module.exports = {
               return match = '&apos;';
           }
         });
-      }
+      },
+
+
+
+
+
+      
 
 }

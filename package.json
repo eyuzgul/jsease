@@ -2,10 +2,9 @@
   "name": "jsease",
   "version": "0.3.6",
   "description": "Easy to use JavaScript functions",
-  "main": "jsease.js",
+  "main": "src/jsease.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "test": "node index.js"
   },
   "repository": {
     "type": "git",
