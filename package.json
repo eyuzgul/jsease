@@ -1,6 +1,6 @@
 {
   "name": "jsease",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "description": "Easy to use JavaScript functions",
   "main": "src/jsease.js",
   "scripts": {
